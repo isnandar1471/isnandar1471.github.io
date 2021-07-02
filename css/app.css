@@ -1,0 +1,16 @@
+#foto{
+	width: 15rem;
+	height: 15rem;
+	overflow: hidden;
+}
+#profil, #portofolio, #kontak, #credit, #credit-message{
+	width: fit-content;
+}
+.github-icon{
+	width: 1.5rem;
+	margin-right: 0.5rem;
+}
+.kontak-icon{
+	width: 6rem;
+	margin: 0.5rem;
+}
