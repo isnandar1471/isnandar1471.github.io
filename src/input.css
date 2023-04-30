@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-fixed {
+  @apply fixed z-50 bg-white bg-opacity-80 shadow-sm shadow-black/20 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+}
+
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px] bg-dark transition duration-300 ease-in-out dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+#dark-toggle:checked ~ label ._toggle-circle {
+  @apply translate-x-3;
+}
