@@ -1,7 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
-colors.slate[500];
+const plugins = [];
+
+try {
+  require("dotenv").config();
+
+  if (process.env.APP_ENV == "development") {
+    plugins.push(require("tailwindcss-debug-screens"));
+  }
+} catch (error) {
+  console.error(error);
+}
+
 module.exports = {
   content: ["index.html"],
   darkMode: "class",
@@ -25,5 +36,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-debug-screens")],
+  plugins: plugins,
 };
